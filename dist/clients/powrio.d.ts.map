@@ -1,1 +1,0 @@
-{"version":3,"file":"powrio.d.ts","sourceRoot":"","sources":["../../src/clients/powrio.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAE1C,qBAAa,MAAO,SAAQ,MAAO,YAAW,MAAM;IAClD,OAAO,CAAC,IAAI,CAA+C;IAC3D,OAAO,CAAC,GAAG,CAAyB;;IAMpC,IAAI;IAeJ,YAAY;CACb"}
