@@ -1,0 +1,1 @@
+{"version":3,"file":"jquery.d.ts","sourceRoot":"","sources":["../../src/clients/jquery.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAE1C,qBAAa,MAAO,SAAQ,MAAO,YAAW,MAAM;IAClD,OAAO,CAAC,IAAI,CAAiD;IAC7D,OAAO,CAAC,UAAU,CAAyD;;IAM3E,IAAI;IASJ,YAAY;CACb"}
