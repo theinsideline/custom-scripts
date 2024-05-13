@@ -1,5 +1,5 @@
 //LOAD "CUSTOM SCRIPTS" FROM GIT REPOSITORY
-const LoamRangersInstall = {
+const CustomScriptsInstall = {
   createScriptElement: (url) => {
     const scriptElement = document.createElement("script");
     scriptElement.defer = true;
@@ -8,7 +8,7 @@ const LoamRangersInstall = {
     return scriptElement;
   },
   load: () => {
-    const appElement = LoamRangersInstall.createScriptElement(
+    const appElement = CustomScriptsInstall.createScriptElement(
       "https://theinsideline.github.io/custom-scripts/bundle.js"
     );
 
@@ -16,4 +16,4 @@ const LoamRangersInstall = {
   },
 };
 
-document.addEventListener("DOMContentLoaded", LoamRangersInstall.load);
+document.addEventListener("DOMContentLoaded", CustomScriptsInstall.load);
