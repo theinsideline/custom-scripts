@@ -86,7 +86,7 @@ export class TawnTawn {
           quantity: "1",
         });
 
-        location.href = `https://www.theinsideline.ca/tauntaun-v2-carbonite.html?id=${query.toString()}&quantity=1`;
+        location.href = `https://www.theinsideline.ca/tauntaun-v2-carbonite.html?${query.toString()}`;
       });
     }
   }
