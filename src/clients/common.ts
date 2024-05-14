@@ -4,8 +4,8 @@ export interface LoadOptions {
 }
 
 export interface Client {
- init: () => void
- onLoadScript: () => void
+  init: () => void;
+  onLoadScript: () => void;
 }
 
 export class Common {

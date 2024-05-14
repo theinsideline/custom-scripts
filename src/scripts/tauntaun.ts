@@ -37,44 +37,59 @@ export class TawnTawn {
   };
 
   location() {
-    $(".gtr").click(() => {
-      const filter1 = $("[name=filter1]").val();
-      const filter2 = $("[name=filter2]").val();
-      const filter3 = $("[name=filter3]").val();
-      const filter4 = $("[name=filter4]").val();
+    const elements = document.getElementsByClassName("gtr");
 
-      const query = new URLSearchParams(<Record<string, any>>{
-        mode: "grid",
-        limit: "24",
-        sort: "popular",
-        brand: "0",
-        min: "0",
-        max: "15000",
-        filter: [
-          $("[name=filter1]").val(),
-          $("[name=filter2]").val(),
-          $("[name=filter3]").val(),
-          $("[name=filter4]").val(),
-        ],
+    for (const element of Array.from(elements)) {
+      element.addEventListener("click", () => {
+        const filter1 = (
+          document.querySelector("[name=filter1]") as HTMLSelectElement
+        ).value;
+        const filter2 = (
+          document.querySelector("[name=filter2]") as HTMLSelectElement
+        ).value;
+        const filter3 = (
+          document.querySelector("[name=filter3]") as HTMLSelectElement
+        ).value;
+        const filter4 = (
+          document.querySelector("[name=filter4]") as HTMLSelectElement
+        ).value;
+
+        const query = new URLSearchParams(<Record<string, any>>{
+          mode: "grid",
+          limit: "24",
+          sort: "popular",
+          brand: "0",
+          min: "0",
+          max: "15000",
+          filter: [filter1, filter2, filter3, filter4],
+        });
+
+        location.href = `https://www.theinsideline.ca/bikes/complete-bikes/all-bikes/?${query.toString()}`;
       });
-
-      location.href = `https://www.theinsideline.ca/bikes/complete-bikes/all-bikes/?${query.toString()}`;
-    });
+    }
   }
 
   myButtonBlack() {
-    $(".myButtonBlack2").click(() => {
-      const modelType = $("[name=selab]").val() as BuildType;
-      const modelSize = $("[name=selaz]").val() as Sizes;
+    const elements = document.getElementsByClassName("myButtonBlack2");
 
-      let idTan = this._map[modelType][modelSize];
+    for (const element of Array.from(elements)) {
+      element.addEventListener("click", () => {
+        const modelType = (
+          document.querySelector("[name=selab]") as HTMLSelectElement
+        ).value as BuildType;
+        const modelSize = (
+          document.querySelector("[name=selaz]") as HTMLSelectElement
+        ).value as Sizes;
 
-      const query = new URLSearchParams({
-        id: this._map[modelType][modelSize],
-        quantity: "1",
+        let idTan = this._map[modelType][modelSize];
+
+        const query = new URLSearchParams({
+          id: this._map[modelType][modelSize],
+          quantity: "1",
+        });
+
+        location.href = `https://www.theinsideline.ca/tauntaun-v2-carbonite.html?id=${query.toString()}&quantity=1`;
       });
-
-      location.href = `https://www.theinsideline.ca/tauntaun-v2-carbonite.html?id=${query.toString()}&quantity=1`;
-    });
+    }
   }
 }

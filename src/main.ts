@@ -9,18 +9,15 @@ const leadDynoClient = new LeadDyno();
 const gtagClient = new Gtag();
 const luckyOrange = new LuckyOrange();
 const powrIo = new PowrIo();
-const jquery = new JQuery();
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   leadDynoClient.init();
   gtagClient.init();
   luckyOrange.init();
   powrIo.init();
-  jquery.init();
 
-  const tauntaun = new TawnTawn()
+  const tauntaun = new TawnTawn();
+
+  tauntaun.location();
+  tauntaun.myButtonBlack();
 });
-
-
