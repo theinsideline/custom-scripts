@@ -62,7 +62,7 @@ export class TawnTawn {
             query += `&filter%5B%5D=${item}`;
           });
 
-        location.href = `https://www.theinsideline.ca/bikes/complete-bikes/all-bikes/?${query.toString()}`;
+        location.href = `https://www.theinsideline.ca/bikes/complete-bikes/all-bikes/?${query}`;
       });
     }
   }
