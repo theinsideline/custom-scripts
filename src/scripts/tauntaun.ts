@@ -30,7 +30,6 @@ export class TawnTawn {
   };
 
   location() {
-    console.log("==========+> Location Init");
     const elements = document.getElementsByClassName("gtr");
 
     for (const element of Array.from(elements)) {
@@ -48,14 +47,19 @@ export class TawnTawn {
           document.querySelector("[name=filter4]") as HTMLSelectElement
         ).value;
 
-        const query = new URLSearchParams(<Record<string, any>>{
+        let query = new URLSearchParams(<Record<string, any>>{
           mode: "grid",
           limit: "24",
           sort: "popular",
           brand: "0",
           min: "0",
           max: "15000",
-          filter: [filter1, filter2, filter3, filter4],
+        }).toString();
+
+        [filter1, filter2, filter3, filter4].forEach((item) => {
+          if (!item) return;
+
+          query += `&filter%5B%5D=${item}`;
         });
 
         location.href = `https://www.theinsideline.ca/bikes/complete-bikes/all-bikes/?${query.toString()}`;

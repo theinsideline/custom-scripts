@@ -26,6 +26,6 @@ export class LeadDyno extends Common implements Client {
     //@ts-ignore
     window.LeadDyno.autoWatch();
 
-    console.log(LeadDyno.name)
+    console.log(LeadDyno.name);
   }
 }
