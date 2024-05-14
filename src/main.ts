@@ -15,6 +15,8 @@ tauntaun.location();
 tauntaun.myButtonBlack();
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("Setup scripts")
+
   leadDynoClient.init();
   gtagClient.init();
   luckyOrange.init();
