@@ -56,11 +56,11 @@ export class TawnTawn {
           max: "15000",
         }).toString();
 
-        [filter1, filter2, filter3, filter4].forEach((item) => {
-          if (!item) return;
-
-          query += `&filter%5B%5D=${item}`;
-        });
+        [filter1, filter2, filter3, filter4]
+          .filter((item) => !!item)
+          .forEach((item) => {
+            query += `&filter%5B%5D=${item}`;
+          });
 
         location.href = `https://www.theinsideline.ca/bikes/complete-bikes/all-bikes/?${query.toString()}`;
       });
