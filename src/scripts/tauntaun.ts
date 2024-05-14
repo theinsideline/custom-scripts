@@ -2,11 +2,6 @@ export type BuildType = "comp" | "pro" | "frame";
 export type Sizes = "xs" | "s" | "m" | "l" | "xl" | "xxl";
 
 export class TawnTawn {
-  constructor() {
-    this.location();
-    this.myButtonBlack();
-  }
-
   private _map: Record<BuildType, Record<Sizes, string>> = {
     comp: {
       xs: "98757892",
@@ -35,6 +30,7 @@ export class TawnTawn {
   };
 
   location() {
+    console.log("==========+> Location Init");
     const elements = document.getElementsByClassName("gtr");
 
     for (const element of Array.from(elements)) {
