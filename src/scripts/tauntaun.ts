@@ -3,10 +3,8 @@ export type Sizes = "xs" | "s" | "m" | "l" | "xl" | "xxl";
 
 export class TawnTawn {
   constructor() {
-    $(() => {
-      this.location();
-      this.myButtonBlack();
-    });
+    this.location();
+    this.myButtonBlack();
   }
 
   private _map: Record<BuildType, Record<Sizes, string>> = {

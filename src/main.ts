@@ -17,7 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
   powrIo.init();
 
   const tauntaun = new TawnTawn();
-
-  tauntaun.location();
-  tauntaun.myButtonBlack();
 });
