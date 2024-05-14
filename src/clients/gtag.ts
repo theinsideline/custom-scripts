@@ -24,5 +24,7 @@ export class Gtag extends Common implements Client {
 
     //@ts-ignore
     window.dataLayer.push("config", "G-8WH159BPHE");
+
+    console.log(Gtag.name)
   }
 }
